@@ -5,8 +5,8 @@
 <h2>Contacto</h2>
 
 <main> 
-<section>
-            <form class="formulario" action="">
+    <section>
+            <form class="formulario" action="create_contact.php" method="POST">
                 <fieldset>
                     <legend>Contáctame enviando tus datos</legend>
                     <div class=".contenedor-campos">
@@ -19,19 +19,19 @@
                         <div class="campo">
                             </div>
                                 <label for="">Telefono</label>
-                                <input class="input-text"  type="tel" name="Telefono" id="" placeholder="Tu Telefono">
+                                <input class="input-text"  type="tel" name="telefono" id="" placeholder="Tu Telefono">
                             <div>
                             <div>
                             <div class="campo">
                                 <div>
                                 <label for="">Correo</label>
-                                <input class="input-text"  type="email" name="Correo" id="" placeholder="Tu correo">
+                                <input class="input-text"  type="email" name="correo" id="" placeholder="Tu correo">
                             </div>
                     </div>
                     <div class="campo">
                         <div>
                             <label for="">Mensaje</label>
-                            <textarea name="" id="" cols="75" rows="10"></textarea  >
+                            <textarea name="mensaje" id="" cols="75" rows="10"></textarea  >
                             <div>
                         <div>
                         <div>
