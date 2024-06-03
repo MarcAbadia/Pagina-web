@@ -9,7 +9,6 @@ $dbname="base";
 
 //crear conexion
 $conn=new mysqli($servername,$username,$password,$dbname);
-
 //verificar conexion
 
 if($conn->connect_error){
