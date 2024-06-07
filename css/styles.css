@@ -17,7 +17,7 @@ body{
 body{
     font-family: "Roboto";
     font-size: var(--tamaño-fuente); /*rem = 16px*/
-    background-image:linear-gradient(to top,rgb(241, 237, 255) 0%, rgb(105, 215, 131) 100%)
+    background-image:linear-gradient(to top,rgb(241, 237, 255) 0%, rgb(44, 117, 235) 100%)
 }
 h1{
     font-size: 3.8rem;
@@ -57,21 +57,18 @@ fieldset{
     background-color: var(--primario);
 }
 
-.boton{
-    background-color: var(--primario);
-    color: var(--blanco);
-    font-size: 2rem;
-    padding: 1rem 3rem;
+.boton {
+    width: 100%;
+    background-color: var(--oscuro);
     border: none;
-    border-radius: 5rem;
+    color: #ffffff;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
     cursor: pointer;
+    margin: 1rem 0;
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-top: 1rem;
-    width: 90%;
-    text-align: center;
-    border: none;
 }
 
 @media (min-width: 480px) {
@@ -96,7 +93,7 @@ h2{
 }
 
 .titulo span{
-    color: var(--gris);
+    color: teal;
     font-size: 2rem;
 }
 
@@ -184,7 +181,7 @@ p{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 2.4rem 2.4rem 2.4rem 2.4rem;
 }
 
 .contenido h3{
@@ -209,40 +206,69 @@ p{
     align-items: center;
 }
 
-.formulario{
-    background-color: rgb(236, 248, 245);
-    width: min(60rem,90%);
+.formulario {
+    background-color: #ffffff;
+    width: min(60rem, 90%);
     margin: 0 auto;
     padding: 2rem;
-    border-radius: 2rem;
+    border-radius: 3rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--primario);
     
 }
-
-.formulario legend{
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: rem;
-    color: var(--primario);
-}
-
 .campo{
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
 }
 
-.campo label{
+.contenedor-campos{
+    margin-bottom: 1.5rem;
+    width: 100%;        
+}
+
+.campo label {
     color: var(--secundario);
     font-weight: bold;
     display: block;
     margin-bottom: 0.5rem;
+    
 }
 
 .input-text{
-    width: 100%;
-    border: none;
+    width: 95%;
+    border: 1px solid var(--secundario);
     padding: 1rem;
     border-radius: 0.5rem;
+    font-size: 1rem;
+    color: var(--texto);
+    box-sizing: border-box;
+}
 
+.boton:hover {
+    background-color: #1f639c;
+}
+
+.boton-2 {
+    width: 15%;
+    background-color: green;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.prueba{
+    width: 95%;
 }
 
 .contacto{
@@ -261,7 +287,7 @@ p{
 
 .gustos{
     font-size: 1.3rem;
-    color: yellowgreen;
+    color: rgb(173, 177, 165);
 }
 
 
@@ -270,12 +296,14 @@ p{
 .success{
     background-color: green;
     font-weight: bold;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
     text-align: center;
-    display: none;
-    margin-top: 1rem;
     color: #ffffff;
+    width: 50%;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    border: .3rem solid blue;
+    margin: 0 auto;
 }
 
 .error{
@@ -284,6 +312,5 @@ p{
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
-    display: none;
     margin-top: 1rem;
 }

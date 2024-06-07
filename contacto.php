@@ -5,7 +5,7 @@
         $msg=$_GET['msg'];
         ?>
         
-        <div class="contenedor <?php echo $status; ?>">
+        <div class="contenedor <?php echo $status;?>">
             <p> <?php echo $msg ?></p>
         </div>
 
@@ -20,7 +20,7 @@
             <form class="formulario" action="create_contact.php" method="POST">
                 <fieldset>
                     <legend>Contáctame enviando tus datos</legend>
-                    <div class=".contenedor-campos">
+                    <div class="contenedor-campos">
                         <div class="campo">
                             </div>
                                 <label for="Nombre">Nombre</label>
@@ -42,11 +42,11 @@
                     <div class="campo">
                         <div>
                             <label for="">Mensaje</label>
-                            <textarea name="mensaje" id="" cols="75" rows="10"></textarea  >
+                            <textarea class="prueba" name="mensaje" id="" cols="75" rows="10"></textarea  >
                             <div>
                         <div>
                         <div>
-                            <input class="input-text"  class="boton" type="submit" value="Enviar">
+                            <input  class="boton-2" type="submit" value="Enviar">
                         </div>
                     </div>
                 </fieldset>

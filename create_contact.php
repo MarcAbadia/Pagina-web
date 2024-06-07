@@ -22,13 +22,15 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     if($result){
         $stmt->close();
         $conn->close();
+        header("Location: contacto.php?status=success&msg=¡Mensaje Guardado!");
         echo "Contacto creado";
-        header("Location: contacto.php?status=sucess&msg=¡Mensaje Guardado!");
     }else{
         echo "Error al crear el contacto";
     }
     
 }else{
-    echo "ERROR EN EL FORMULARIO";
     header("Location: contacto.php?status=error&msg=¡Error al guardar el mensaje!");
+    echo "ERROR EN EL FORMULARIO";
 }
+
+?>
