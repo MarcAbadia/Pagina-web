@@ -224,28 +224,26 @@ p{
     
 }
 .campo{
-    margin-bottom: 1.5rem;
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 .contenedor-campos{
-    margin-bottom: 1.5rem;
-    width: 100%;        
+    width: 100%;
+    margin-bottom: 1rem;        
 }
 
 .campo label {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     width: 100%;
 }
 
 .input-text{
-    width: 100%;
+    width: 95%;
     border: 1px solid var(--secundario);
     padding: 1rem;
     border-radius: 0.5rem;
-    font-size: 1rem;
     color: var(--texto);
-    box-sizing: border-box;
 }
 
 .boton:hover {
@@ -313,15 +311,15 @@ p{
     text-transform: uppercase;
 }
 
-/*ESTILOS PARA LA LISTA DE MENSAJES*/
-.cabecera{
+/* ESTILOS PARA LA LISTA DE MENSAJES */
+.cabecera {
     padding-bottom: 1rem;
 }
 
-.campoCabecera{
-    font-size: 2rem;
+.campoCabecera {
+    font-size: 1.5rem;
     font-weight: bold;
-    padding: 2rem 0;
+    padding: 1rem;
     background-color: rgb(241, 89, 19);
     text-align: center;
     text-transform: uppercase;
@@ -329,20 +327,164 @@ p{
     border: 1px solid var(--oscuro);
 }
 
-.fila{
+.fila {
     display: grid;
-    grid-template-columns: 0.5fr 1fr 2fr 2.5fr 4fr 1.5fr;
+    grid-template-columns: 0.5fr 1fr 1.5fr 2fr 3fr 1fr;
 }
 
-.campo2{
-    font-size: 2rem;
-    margin: 0 2rem;
+.campo2 {
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
 }
 
-.fila.impar{
+.fila.impar {
     background-color: rgb(0, 238, 255);
+    height: 4.5rem;
 }
 
-.fila.par{
+.fila.par {
     background-color: rgb(194, 193, 201);
+    height: 4.5rem;
 }
+
+/* Ajuste para el contenedor de los iconos */
+.campoAccion {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;  /* Usar flexbox para alinear los iconos */
+    justify-content: center;  /* Centrar horizontalmente */
+    align-items: center;  /* Centrar verticalmente */
+    gap: 5px;  /* Espacio entre los iconos */
+}
+
+/* Ajuste para los iconos */
+.iconn {
+    width: 34px; /* Ancho del ícono */
+    height: 34px; /* Altura del ícono */
+    margin: 0;  
+    padding: 0;  
+    display: inline-block;
+}
+
+/* quitar subrayado de los enlaces si hay alguno */
+.campoAccion a {
+    text-decoration: none;  /* Eliminar subrayado */
+}
+
+
+/* MENSAJE FORMULARIO */
+.mensaje-container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.mensaje-container h1 {
+    background-color: #79879e;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    margin: 20px -20px 20px -20px;
+}
+
+.mensaje-detalle {
+    line-height: 1.6;
+}
+
+.mensaje-detalle p {
+    margin: 10px 20;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    line-height: 1.6;
+    padding: 2rem;
+    border-radius: 0 0 8px 8px;
+    margin: -20px -20px 20px -20px;
+    background-color: var(--gris);
+    border-bottom: 1px solid var(--gris);
+    border-top: 1rem solid var(--gris);
+    border-left: 1rem solid var(--gris);
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1);
+}
+
+.mensaje-detalle strong {
+    color: #9a32fc;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.6;
+    margin: 50px 0;
+}
+
+
+/* styles.css */
+.edit-form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.form-title {
+    background-color: rgb(85, 83, 226);
+    color: white;
+    width: 55%;
+    text-align: center;
+    border-radius: 1rem;
+    margin: 3rem auto; /* Esto centra el elemento horizontalmente */
+    font-size: 3rem;
+    text-transform: uppercase;
+    display: block; /* Asegura que el elemento tome el ancho especificado */
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    width: 98%;
+}
+
+.form-input {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-textarea {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    resize: vertical;
+    height: 150px;
+}
+
+.btn-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: #45a049;
+}
+
