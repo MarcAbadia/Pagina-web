@@ -234,15 +234,12 @@ p{
 }
 
 .campo label {
-    color: var(--secundario);
-    font-weight: bold;
-    display: block;
-    margin-bottom: 0.5rem;
-    
+    margin-bottom: 1.5rem;
+    width: 100%;
 }
 
 .input-text{
-    width: 95%;
+    width: 100%;
     border: 1px solid var(--secundario);
     padding: 1rem;
     border-radius: 0.5rem;
@@ -291,64 +288,61 @@ p{
 }
 
 
-/*mensajes form*/
-
+/* MENSAJES FORMULARIO */
 .success{
     background-color: green;
-    font-weight: bold;
-    font-size: 2.5rem;
-    text-align: center;
-    color: #ffffff;
+    color: white;
     width: 50%;
-    text-transform: uppercase;
+    text-align: center;
     border-radius: 1rem;
-    border: .3rem solid blue;
-    margin: 0 auto;
+    border: 0.5rem solid rgb(24, 104, 0);
+    margin-top: 3rem;
+    font-size: 3rem;
+    text-transform: uppercase;
 }
 
 .error{
     background-color: red;
-    font-weight: bold;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    color: white;
+    width: 50%;
     text-align: center;
-    margin-top: 1rem;
+    border-radius: 1rem;
+    border: 0.5rem solid rgb(139, 1, 1);
+    margin-top: 3rem;
+    font-size: 3rem;
+    text-transform: uppercase;
 }
 
-/*informacioon form*/
-
-.leer{
-    width: 100%;
-    height: 100%;
-    color: black;
+/*ESTILOS PARA LA LISTA DE MENSAJES*/
+.cabecera{
+    padding-bottom: 1rem;
 }
 
-.info{
-    display: flex;
-    grid-template-columns: 0.5fr 1fr  1fr 2fr 3fr;
+.campoCabecera{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem 0;
+    background-color: rgb(241, 89, 19);
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    border: 1px solid var(--oscuro);
 }
 
-.nombre{
-    width: 100%;
-
-
-}
-.id{
-    width: 100%;
-
+.fila{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 2fr 2.5fr 4fr 1.5fr;
 }
 
-.telefono{
-    width: 100%;
-
+.campo2{
+    font-size: 2rem;
+    margin: 0 2rem;
 }
 
-.correo{
-    width: 100%;
-
+.fila.impar{
+    background-color: rgb(0, 238, 255);
 }
 
-.mensaje{
-    width: 100%;
-
+.fila.par{
+    background-color: rgb(194, 193, 201);
 }

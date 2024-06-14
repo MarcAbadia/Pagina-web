@@ -8,26 +8,63 @@
 ?>
 <h1>Leer mensajes</h1>
 
-<div class="leer">
-<?php
-    while($row = $result->fetch_assoc()){
-        ?>
-        <div class="info">
-                <div class="id"><?=$row['id']?></div>
-                <div class="nombre"><?=$row['nombre']?></div>
-                <div class="telefono"><?=$row['telefono']?></div>
-                <div class="correo"><?=$row['correo']?></div>
-                <div class="mensaje"><?=$row['mensaje']?></div>
+<div class="contenedor listado">
+    <div class="fila cabecera">
+        <div class="campoCabecera">
+            Id
         </div>
-
+        <div class="campoCabecera">
+            Nombre
+        </div>
+        <div class="campoCabecera">
+            Telefono
+        </div>
+        <div class="campoCabecera">
+            Correo
+        </div>
+        <div class="campoCabecera">
+            Mensaje
+        </div>
+        <div class="campoCabecera">
+            Acción
+        </div>
+    </div>
+    <?php
+        $num=0;
+        while($row = $result->fetch_assoc()){
+            $num++;
+            $paridad="impar";
+            if($num%2==0){
+                $paridad="par";
+            }
+            //PARIDAT ME INDICA SI LA FILA ES PAR O IMPAR
+            ?>
+            <div class="fila <?=$paridad?>">
+                    <div class="campo2"><?=$row['id']?></div>
+                    <div class="campo2"><?=$row['nombre']?></div>
+                    <div class="campo2"><?=$row['telefono']?></div>
+                    <div class="campo2"><?=$row['correo']?></div>
+                    <div class="campo2"><?=$row['mensaje']?></div>
+                    <div class="btn-borrar">
+                        <a href="borrar.php?id=<?=$row['id']?>"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash-x" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#670546" fill="none" stroke-linecap="round" stroke-linejoin="round" alt="BORRAR">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M4 7h16" />
+                            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                            <path d="M10 12l4 4m0 -4l-4 4" />
+                            </svg> </a>
+                    </div>
+            </div>
 
         <?php
-    }
+        }
 
-?>
+        if($num==0){
+            echo "No hay registros para mostrar";
+        }
+    ?>
 </div>
 
-
 <?php
-include 'footer.php';
+    include 'footer.php';
 ?>
